@@ -1,0 +1,99 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientHistory</title>
+    <link rel="stylesheet" href="{% static 'css/Clientstyle.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+<body>
+  <nav class="navbar navbar-expand-sm">
+    <img src="{% static 'images/ClientImages/MAHAKALI_LOGO.png' %}" alt="error" style="margin-left: 50PX;">
+    <div class="container">
+      <!-- Logout Button -->
+      <button type="button" class="btn btn-danger" id="btn" data-toggle="modal" data-target="#logoutModal">
+        Logout
+      </button>
+      <div id="logoutModal" class="modal fade" role="dialog" style="background-image: url(../static/images/ClientImages/logout.png);background-repeat:no-repeat;background-size:cover;height: 800px;width: 1600px;" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Confirm Logout</h4>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to log out?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-danger" id="confirmLogout">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('confirmLogout').addEventListener('click', function() {
+        alert('Logged out successfully!');
+        $('#logoutModal').modal('hide');
+      });
+    </script>
+</nav>
+   <center> <div class="order-history">
+        <h1>Order History</h1>
+        <div class="order-card">
+            <div class="order-header">
+                <h2>Orders #3</h2>
+                <p class="order-date">Dec, 2020</p>
+            </div>
+            <div class="order-details">
+                <ul>
+                    <li>
+                        <span class="item-name">Product A</span>
+                        <span class="item-quantity">Quantity: 2</span>
+                        <span class="item-price">2000\-</span>
+                    </li>
+                    <li>
+                        <span class="item-name">Product B</span>
+                        <span class="item-quantity">Quantity: 3</span>
+                        <span class="item-price">6000\-</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-total">
+                <p>Total: 8000\-</p>
+            </div>
+        </div></center>
+        </div>
+     
+          <div style="background-color: black;height: 200px;color: whitesmoke;">
+            <div style="text-decoration: none; display: flex; margin-left: 400px; margin-top: 10px;">
+             <ul class="chintu" style="display: flex;flex-direction: row;text-align: center;justify-content: center;list-style: none;gap: 0 2rem;font-size: 16px;text-transform: capitalize;"> 
+              <li><a href="">HOME</a></li>
+             <li><a href="Profile">PROFILE</a></li>
+             <li><a href="Projectlist">PROJECTLIST</a></li>
+             <li><a href="Ticketlist">TICKETLIST</a></li>
+             <li><a href="Feedback">FEEDBACK</a></li>
+             <li><a href="History">HISTORY</a></li>
+           </ul> 
+           </div> 
+            <div style="margin-left: 545px;">
+             <i class="fa-brands fa-google" style="font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <i class="fa-brands fa-twitter" style="font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <i class="fa-brands fa-square-instagram" style="font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <i class="fa-brands fa-facebook-messenger"style="font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <i class="fa-brands fa-facebook" style="font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <i class="fa-brands fa-linkedin" style="font-size: 30px;"></i>
+            </div>
+            <div>
+             <P style="text-align: center;margin-top: 20px;transform:translateX(-20px)">@Copyright.All rights reserved;Designed by SURENDER</P>
+            </div>
+           </div>
+</body>
+</html>
